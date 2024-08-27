@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desbloqueie o Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: white;
+        }
+        #container {
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            width: 300px;
+            border: 2px solid #444;
+            border-radius: 5px;
+            background-color: #222;
+            color: white;
+        }
+        a {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Digite a Palavra Secreta</h1>
+        <input type="text" id="senha" placeholder="Digite a palavra...">
+        <a id="link-secreto" href="https://youtu.be/e8AVHBcvPrU?si=av2vpn5NmShm-p0e" target="_blank">Acesse o Link Secreto</a>
+    </div>
+
+    <script>
+        document.getElementById("senha").addEventListener("input", function() {
+            var senha = document.getElementById("senha").value;
+            var link = document.getElementById("link-secreto");
+
+            if (senha.toLowerCase() === "almaperdida") {
+                link.style.display = "inline-block";
+            } else {
+                link.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
